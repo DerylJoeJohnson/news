@@ -10,15 +10,15 @@ $(document).ready(function(){
                 var output=" ";
                 for(var i in data['articles'])               {
                     
-                    output+="<div class='card'> <div class='card-header'>"+  data['articles'][i].title+"</div>";
-                    output+="<div class='card-body'>  :"+ data['articles'][i].urlToImage +"<br>";
+                    output+="<div class='col col-sm-4 col-4 d-flex align-items-stretch'><div class='card'> <div class='card-header'>"+  data['articles'][i].title+"</div>";
+                    output+="<div class='card-body'><img src='"+ data['articles'][i].urlToImage +"'width=''height=''class='card-img-top'><br>";
                     output+="Published on : "+data['articles'][i].publishedAt+"<br>";
                     output+="Description : <br>"+  data['articles'][i].description   +"<br>";
-                    output+="url :"+  data['articles'][i].url   +"<br></div></div>";
+                    output+="<a href='"+data['articles'][i].url+"'>Read More</a><br></div></div></div>";
                     
                 }
                 
-                $(".News").html(output);
+                $("#News").html(output);
 
 
             }
